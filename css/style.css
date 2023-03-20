@@ -1,0 +1,552 @@
+ *{
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+}
+
+:root{
+    
+--color-primary : #FF6978;
+--color-success : #00bf8e;
+--color-warning : #f7c94b;
+ --color-danger: #340068
+ ;
+--color-danger-variant: rgba(247,88,66,0.4);
+--color-white : #ffffff ;
+--color-light : rgba(255,255,255,0.7);
+--color-black : #000 ;
+--color-bg1: #B6CED1 ;
+--color-bg2:#d3004c ;
+--color-grid: #000000;
+/* kif njou bch nbadlou heja maamoula bl colors hedhouma il suffit nbadlouha mn hne lbe9i lkolh ytaba3 */
+ 
+
+--container-width-lg:80% ;
+--container-width-md:90% ;
+--container-width-sm:94% ;
+
+--transition : all 400ms ease;
+}
+/*google fonts */
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color:var(--color-white);
+    background:var(--color-bg1);
+    overflow-x: hidden !important;
+
+}
+.container{
+   width: var(--container-width-lg); 
+   margin: 0 auto ;
+}
+
+section{
+    padding: 6rem 0 ; /* 1rem = 16pixels*/
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h1,h2,h3,h4,h5{line-height: 1.2;}
+    h1{font-size: 2.4 rem;} 
+    h2{font-size: 2 rem;}
+    h3{font-size: 1.6 rem;}
+    h4{font-size: 1.3 rem;}
+
+a{
+    color: var(--color-white);
+}
+   
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem 68.5px ;
+    border: 2px solid transparent;
+    font-weight: 100px;
+}
+
+.btn:hover{
+    background : var(--color-grid);
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.btn-primary{
+    background : var(--color-danger);
+    color: var(--color-white)
+}
+
+/*============================= NAVBAR ==============*/
+nav{
+    background : var(--color-primary);
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+/* change navbar styles on scroll using javascript  */
+.window-scroll{
+    background: transparent;
+    box-shadow:0 1rem 2rem rgba(0,0,0,0.2);
+}
+.nav__container{
+    display:none;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+   align-items: center ;
+}
+ 
+/*Button available only on phones & tablettes*/ 
+nav button{
+    display:none;
+}
+
+ .nav__Menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+ }
+
+ .nav_Menu a{
+     font-size: 0.9 rem;
+     transition: var(--transition);
+ }
+.nav__Menu a:hover{
+    color: var(--color-black);
+}
+/*============================= END OF NAVBAR ==============*/
+/*============================= HEADER        ==============*/
+header{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height:85vh;
+    margin-bottom: 5rem;
+    overflow-x: hidden;
+}
+.header__container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+.header__left{
+    margin: 1rem 0 2.4rem;
+}
+     
+/*================ Categories=============*/
+.categories { 
+    background-color: var(--color-danger);
+    overflow-x: hidden;
+}
+.categories h1{
+    line-height: 1;
+margin-bottom: 3rem;
+}
+.categories__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+}
+
+.categories__left{
+    margin:4 rem;
+}
+.categories__right{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1.2rem;
+}
+.categorie{
+    background-color: var(--color-danger);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+.categorie:hover{
+    box-shadow: 0 4rem 4rem rgba(0,0,0,0.3);
+    z-index: 1;
+    
+}
+
+.categorie:first-child{
+    background: var(--color-primary);
+}
+
+.categorie:last-child{
+    background: var(--color-primary);
+}
+
+
+.categorie:nth-child(2){
+    background: var(--color-primary);
+}
+.categorie:nth-child(3){
+    background: var(--color-primary);
+}
+.categorie:last-child:hover{
+    background : var(--color-grid);
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.categorie:first-child:hover{
+    background : var(--color-grid);
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.categorie:nth-child(3):hover{
+    background : var(--color-grid);
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.categorie:nth-child(2):hover{
+    background : var(--color-grid);
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.categorie__icon{ 
+    background:goldenrod;
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+.categorie h5{ 
+    margin: 2rem 0 1rem;
+}
+.categorie p{
+    font-size: 0.85rem;
+}
+ /*================  END Categories=============*/
+
+
+ /*================ ELITEPACK =============*/
+
+ .Elitepack{
+    margin-top: 0rem;
+    overflow-x: hidden;
+ }
+.Elitepack__container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.Elitepack{
+    background-color: var(--color-danger);
+    text-align: center;
+    border: 1px solid transparent ;
+    transition: var(--transition);
+}
+.Elitepack:hover{
+background-color:transparent;
+border-color: var(--color-primary);
+}
+.Elitepack__price{
+    padding: 2rem;
+}
+.Elite__price p{
+margin: 1.2rem 0 2rem;
+font-size: 0.9rem;
+}
+
+.Elitepack1{
+    background-color: #424890;
+}
+.Elitepack11:hover{
+    background-color:var(--color-primary);
+}
+.Elitepack12:hover{
+    background-color:var(--color-primary);
+}
+
+
+/*===============       Testimonials      ===============*/
+.Testi__container{
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+    position: relative;
+    
+}
+.swiper-pagination{
+    position: relative !important;
+    bottom: -2rem !important;
+}
+
+.Testi{
+    padding-top: 2rem;
+    
+}
+.avatar{
+    width:6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow :hidden;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--color-bg2);
+
+}
+
+.Testi__info{
+    text-align:center;}
+
+    .Testi__body{
+        background-color: var(--color-primary);
+        padding: 2rem;
+        margin-top: 3rem;
+        position: relative  ;
+    }
+    
+    .Testi__body::before {
+        content: "";
+        display: block;
+        background:linear-gradient(135deg,transparent,var(--color-primary),var(--color-primary),var(--color-primary));
+        width: 3rem;
+        height:3rem;
+        position :absolute;
+        left:46%;
+        top: -1.5rem;
+        transform: rotate(45deg);
+    }
+    
+/*============      End of Testimonials      ===============*/
+/*============              FOOTER           ===============*/
+footer{
+background-color: var(--color-primary);
+padding-top: 5rem;
+font-size: 0.9rem ;
+}
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem;
+}
+.footer__container >div h4{
+margin-bottom: 1.2rem;
+}
+.footer__a p {
+    margin: 0 0 2rem;
+} 
+footer ul li a:hover{
+    text-decoration: underline;
+}
+.footer__socials ul{
+    text-align: center !important;
+
+}
+.footer__socials{
+text-align: center !important;
+    display:flex;
+    gap:1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-left:39%;
+}
+.footer__copyright{
+    text-align: center !important;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--color-primary);
+}
+
+/*===============================Media queries (tablettes)==================*/
+@media screen and(max-width : 1024px) {
+    .container{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2.2rem ;
+    }
+    h2{
+        font-size: 1.7rem ;
+    }
+    h3{
+        font-size: 1.4rem ;
+    }
+    h4{
+        font-size: 1.2rem ;
+    }
+
+/*=================NAVBAR=================*/
+nav button{
+    display:inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor:pointer;
+
+}
+
+nav button#close-menu-btn{
+    display: none;
+}
+.nav__Menu{ 
+    position: fixed;
+    top:5rem;
+    right:5%;
+    height: fit-content;
+    width:18rem;
+    flex-direction: column;
+    gap:0;
+    display: none;
+    
+
+}
+
+.nav__Menu li{
+    width:100%;
+    height:5.8rem;
+    animation: animateNavitems 400ms linear forwards;
+    transform-origin: top right;
+    opacity: 0;
+}
+.nav__Menu li:nth-child(2){
+ animation-delay: 200ms ;
+}
+.nav__Menu li:nth-child(3){
+    animation-delay: 400ms ;
+}
+
+.nav__Menu li:nth-child(4){
+    animation-delay: 600ms ;
+}
+
+@keyframes animateNavitems{
+    0%{
+transform: rotateZ(-90deg) rotateX(0) scale(0.1);
+    }
+    100%{
+        transform: rotateZ(0) rotateX(0) scale(1);
+        opacity: 1; 
+    }
+
+}
+.nav__Menu li a{
+    background: var(--color-danger);
+    box-shadow: -1rem 6rem 10rem rgba(0, 0,0, 0.6);
+    width:100%;
+    height:100%;
+    display: grid;
+    place-items:center ;
+
+}
+
+.nav__Menu li a:hover{
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+ /* ======================= HEADER ==========================*/
+ header{
+     height: 100vh;
+
+ }
+
+ .header__container{
+     grid-template-columns: 1fr;
+     text-align: center;
+     margin-top: 0;
+ }
+
+ .header__left p{
+    margin-bottom: 1.3rem;
+    }
+
+ /*========================== Categories ======================*/
+ .categorie{
+     height: auto;
+ }
+ .categories__container{
+     grid-template-columns: 1fr;
+     gap: 3rem;
+ }
+ .categories__left{
+     margin-right: 0;
+ }
+
+
+/*========================== Popular courses ======================*/
+.Elitepack__container{
+   grid-template-columns: 1fr 1fr;
+}
+
+
+/*========================== Testis ======================*/
+.Testi__body{
+   padding: 1.2rem;
+}
+/*========================== Footer ======================*/
+.footer__container{
+   grid-template-columns:1fr 1fr;
+}}
+/* ================== Media QUERIES phones ============== */
+/*=========================================================*/
+@media  screen and (max-width:600px) {
+    .container{
+     width: var(--container-width-sm);
+    }
+/*=======================   NAVBAR  =====================*/
+    .nav__Menu{
+    right: 3%;
+    }
+/*=======================   HEADER  =====================*/
+    header{
+    height: 60vh;
+    }
+    .header__container{
+    text-align: center;
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    }
+    .header__left p{
+    margin-bottom: 1.3rem;
+    }
+
+/*=======================   CATEGORIE  =====================*/
+
+ .categories__right{
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+}
+.categorie{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.categorie__icon{
+   margin-top: 4px;
+   display: inline-block;
+}
+
+/*========================== Popular courses ======================*/
+.Elitepack__container{
+    grid-template-columns:  1fr;
+ }
+/*========================  TESTIS  =======================*/
+.testimonial__body{
+    padding: 1.2rem;
+}
+/*========================== Footer ======================*/
+.footer__container{
+    grid-template-columns: 1fr; 
+    text-align: center;
+    gap: 2rem;
+}
+.footer__socials{
+    justify-content: center !important;
+}
+}
